@@ -1,0 +1,189 @@
+<?php /*?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('site_name'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->appendFile($this->basePath() . '/js/bootstrap.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.min.js')
+            ->appendFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->appendFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath('img/zf2-logo.png') ?>" alt="Zend Framework 2"/>&nbsp;<?php echo $this->translate('Skeleton Application') ?></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>
+
+<?php */?>
+
+
+<?php echo $this->doctype(); ?>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <?php echo $this->headTitle($this->translate('The Seventh Heaven'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('keywords', '')
+            ->appendName('description', '')
+            ->appendName('SKYPE_TOOLBAR', 'SKYPE_TOOLBAR_PARSER_COMPATIBLE')
+        ?>
+        
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+            ->prependStylesheet($this->basePath() . '/css/fonts.css')
+            ->prependStylesheet($this->basePath() . '/css/template.css') ?>
+        
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->appendFile($this->basePath() . '/js/jquery-1.7.2.min.js')
+            ->appendFile($this->basePath() . '/js/webfont.js')
+            ->appendFile($this->basePath() . '/js/jquery.ezmark.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.jscrollpane.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.mousewheel.js')
+            ->appendFile($this->basePath() . '/js/jquery.selectbox.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.validation-1.9.0.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.nicefileinput.min.js')
+            ->appendFile($this->basePath() . '/js/scripts.js')
+            ->appendFile($this->basePath() . '/js/html5shiv.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->appendFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->appendFile($this->basePath() . '/js/jquery.placeholder.min.js', 'text/javascript', array('conditional' => 'lt IE 10',))
+        ; ?>
+        
+        <script>
+            var WebFontConfig = {
+                custom: {
+                    families: [
+                        'Open Sans'
+                    ],
+                    urls: ['css/fonts.css']
+                }
+            }
+            WebFont.load(WebFontConfig);
+        </script>
+
+    </head>
+    <body class="double">
+        <div class="double-main">
+            <div class="double-gray"></div>
+            <div class="double-wrap">
+                <div class="double-middle clearfix">
+                    <div class="double-left">
+                        <div class="double-logo">
+                            <a href="<?=$this->url('home') ?>"><img src="<?=$this->basePath('img/logo-home.png') ?>" alt="" /></a>
+                            <span>Летать — высоко, любить — горячо!</span>
+                        </div><!--end home-logo-->
+                        <div class="double-info-box">
+                            <h1>Приветствуем на 7 небе!</h1> 
+                            <p>Группа Red Hot Chili Peppers была основана рэпером и певцом Энтони Кидисом, 
+                                гитаристом Хиллелом Словаком, басистом Фли и ударником Джеком Айронсом, в то время, 
+                                как они посещали Fairfax High School в Лос-Анджелесе.</p>
+                        </div><!--end home-info-box-->
+                        <div class="double-video-box">
+                            <div class="double-video-wrap">
+                                <iframe width="469" height="300" src="http://www.youtube.com/embed/9gTw2EDkaDQ?rel=0"></iframe> 
+                            </div><!--end home-video-wrap-->
+                        </div><!--end home-video-box-->
+                        <div class="double-banner-box">
+                            <a href="#"><img src="img/banner-1.png" alt="" /></a>
+                        </div><!--end home-banner-box-->
+                    </div><!--end double-left-->
+                    <div class="double-right">
+                        <div class="lang-position-1">
+                            <div class="lang">
+                                <div class="lang-top"><img src="img/ru.png" alt="" /></div>
+                                <div class="lang-list">
+                                    <div class="lang-row"><a href="#"><img src="img/uk.png" alt="" /></a></div>
+                                </div><!--end lang-list-->
+                            </div><!--end lang-->
+                        </div><!--end lang-position-1-->
+                        <div class="clr"></div>
+                        <div class="double-registration align-center">
+                            <div class="double-registration-title">Впервые на 7 небе? <br /> Попробуйте, <br /> вам понравится!</div>
+                            <div class="btn-orange-big-shadow-295"><a href="#" class="btn-orange-big width-295">Регистрация</a></div>
+                        </div><!--end double-registration-->
+                        <div class="login-box">
+                            <form action="#" id="login-form">
+                                <div class="title-1 margin-bottom-45 align-center">Войти на сайт</div>
+                                <div class="margin-bottom-20">
+                                    <input type="text" name="email" value="" placeholder="E-mail" class="textbox-transparent width-230" />
+                                </div>
+                                <div class="margin-bottom-20">
+                                    <input type="text" name="pass" value="" placeholder="Пароль" class="textbox-transparent width-230" />
+                                </div>
+                                <div class="margin-bottom-25 login-checkbox">
+                                    <input type="checkbox" name="" value="" class="checkbox-big-transparent" id="login-checkbox" />&nbsp;&nbsp;
+                                    <label for="login-checkbox">Чужой компьютер</label>
+                                </div>
+                                <div class="margin-bottom-20 align-center">
+                                    <input type="submit" name="" value="Войти" class="btn-orange-small width-110" />
+                                </div>
+                                <div class="margin-bottom-50 align-center">
+                                    <a href="#">Не помню пароль</a>
+                                </div> 
+                            </form>
+                        </div><!--end login-box-->
+                        <div class="login-social">
+                            <div class="title-2 align-center margin-bottom-30">Войти с помощью соц. сетей:</div>
+                            <div class="align-center margin-bottom-40">
+                                <a href="#" class="login-social-ico"><img src="img/fb-ico.png" alt="" /></a>
+                                <a href="#" class="login-social-ico"><img src="img/vk-ico.png" alt="" /></a>
+                                <a href="#" class="login-social-ico"><img src="img/tw-ico.png" alt="" /></a>
+                            </div>
+                            <div class="login-social-info align-center">Входя, вы соглашаетесь с <a href="#">условиями предоставления услуг</a></div>
+                        </div><!--end login-social-->
+                    </div><!--end double-right-->
+                </div><!--end double-middle-->
+            </div><!--end double-wrap-->
+        </div><!--end double-main-->
+        <div class="double-footer">
+            <div class="total"><div>Нас уже: 98 245 984</div></div>
+            <div class="double-footer-wrap">
+                <div class="double-foote-main">
+                    <div class="double-copyright">© 2014 7neboo.com</div>
+                    <div class="double-author"><a href="http://www.web-creator.com.ua/" target="_blank">Cделано в <br /> Web-creator, 2014</a></div>
+                </div><!--end double-foote-main-->
+            </div><!--end double-footer-wrap-->
+        </div><!--end double-footer-->
+    </body>
+</html>
